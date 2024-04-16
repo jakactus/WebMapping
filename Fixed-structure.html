@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <title>Fixed Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!--    1.1.  Include the reference to the Mapbox JavaScript here in the <head> of the page  -->
+      
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js'></script>
+    <!--    1.2 Include the reference to the Mapbox CSS here in the <head> of the page  -->
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        /* 1.4 Insert the CSS code here between the <style> tags */
+        h1 {text-align: center;}
+        p {text-align: center;}
+        body { margin:50px; padding:0; }
+        #map1 { position:relative; height:500px; width:50%;}
+        /* 2.5.2 Insert additional CSS code here between the <style> tags */
+        #map2 { position:relative; height:500px; width:50%;}
+        #map3 { position:relative; height:500px; width:50%;}
+        
+        body {
+        background-image: url("https://slidescorner.com/wp-content/uploads/2022/09/03-Bruce-Antique-Old-Paper-Background-by-SlidesCorner.jpg");
+        background-color: cornsilk;
+        }
+        
+    </style>
+  </head>
+
+  <body>
+
+        <!-- 1.3 Insert the div for the structure of the page here in the <body> of the page -->
+    <h1 style="font-family:verdana;"> Trivia Nights in Eugene and Springfield</h1>
+     <p style="font-family:verdana;"> Ever wanted to go on a trivia tour of bars in Eugene and Springfield? Click on the points to learn about the time and place for each venue's event.</p>
+    <h2 style="font-family:verdana;"> 1. The Barn Light (Eugene): </h2>
+    <div id='map1'></div>
+
+    <h2 style="font-family:verdana;"> 2. Rennie's Landing (Eugene):</h2>
+    <div id='map2'></div>
+
+    <h2 style="font-family:verdana;"> 3. PublicHouse (Springfield):</h2>
+    <div id='map3'></div>
+      
+
+        <script>
+            /* Insert the JavaScript within the <script> tags, within the body */
+            // 2.1 Start with the Mapbox access token
+            mapboxgl.accessToken = 'pk.eyJ1IjoiamFrb3R2aXMiLCJhIjoiY2x1bGhqeG10MGtlNTJrbWw3Znp6NXhwMyJ9.e7tPYpGGFxv1DBi3veeYog';
+
+            // 2.2 Then initialize the first map
+   var map = new mapboxgl.Map({
+       container: 'map1', // id of a div on your page, where the map will be inserted
+       style: 'mapbox://styles/mapbox/streets-v11', // the style URL 'mapbox://styles/mapbox/streets-v11' 
+       center: [-123.09288, 44.04981], // starting position [lng, lat] eg. [-122.6788, 45.5212]
+       zoom: 13 // starting zoom 
+   });
+
+            // 2.3 Add any other variables (such as popups and markers) to the first map
+                  var popup = new mapboxgl.Popup()
+                      .setHTML('<a href=http://barnlightbar.com/"> http://barnlightbar.com/ </a> <p>924 Willamette St, Eugene, OR 97401 Trivia Friday nights at 7 pm. <br><br>Very fun niche (challenging) questions, great host.</p>');
+
+                  var marker = new mapboxgl.Marker({color:'purple'})
+                    .setLngLat([-123.09288, 44.04981]) // starting position [lng, lat]
+                    .setPopup(popup) //add the popup named "popup" to this marker 
+		          .addTo(map); // add it to the map with the ID "map"
+
+            // 2.4 Add arguments to disable the map interactivity here
+            // Disable drag and zoom handlers.
+               // Disable drag and zoom handlers.
+               map.dragPan.disable();
+               map.scrollZoom.disable();
+               map.boxZoom.disable();
+               map.dragRotate.disable();
+               map.keyboard.disable();
+               map.doubleClickZoom.disable();
+               map.touchZoomRotate.disable();
+               map.touchZoomRotate.disableRotation();
+
+            // 2.5.3 Then initialize the 2nd map
+         // Then initialize the 2nd map
+         var map2 = new mapboxgl.Map({
+         container: 'map2', // id of a div on your page, where the map will be inserted
+         style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+         center: [-123.078833, 44.04667], // starting position [lng, lat] eg. [-122.6788, 45.5212]
+
+         zoom: 14 // starting zoom 
+         });
+
+            // 2.5.4 Add any other variables (such as markers) to the second map
+         var popup2 = new mapboxgl.Popup()
+        .setHTML('<a href=https://www.rennieslanding.com/"> https://www.rennieslanding.com/ </a> <p>1214 Kincaid St, Eugene, OR 97401 Trivia Tuesday nights at 9pm. <br><br> The latest start time of the three, reportedly quite a popular event.</p>');
+
+         var marker2 = new mapboxgl.Marker({color:'blue'})
+           .setLngLat([-123.078833, 44.04667]) // starting position [lng, lat] 
+           .setPopup(popup2) //add the popup to the marker 
+           .addTo(map2); // id it to the map with the ID *map2*
+
+            // 2.5.5 Add arguments to disable the second map's interactivity here
+                     // Disable drag and zoom handlers. 
+         map2.dragPan.disable();
+         map2.scrollZoom.disable();
+         map2.boxZoom.disable();
+         map2.dragRotate.disable();
+         map2.keyboard.disable();
+         map2.doubleClickZoom.disable();
+         map2.touchZoomRotate.disable();
+         map2.touchZoomRotate.disableRotation();
+            
+         // Then initialize the 3rd map
+         var map3 = new mapboxgl.Map({
+         container: 'map3', // id of a div on your page, where the map will be inserted
+         style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+         center: [-123.02053, 44.04744], // starting position [lng, lat] eg. [-122.6788, 45.5212]
+         zoom: 14 // starting zoom 
+         });
+            
+        //Add any other variables (such as markers) to the third map
+         var popup3 = new mapboxgl.Popup()
+         .setHTML('<a href=https://www.publichousehub.com/"> https://www.publichousehub.com/ </a> <p>418 A St #4606, Springfield, OR 97477 Trivia Monday Nights at 6:30pm. <br><br> Venue has a nice outdoor section and food options on site. Great fries. More mainstream questions than The Barn Light trivia and very fun.</p>');
+
+            
+         var marker3 = new mapboxgl.Marker({color:'orange'})
+           .setLngLat([-123.02053, 44.04744]) // starting position [lng, lat] 
+           .setPopup(popup3) //add the popup to the marker 
+           .addTo(map3); // id it to the map with the ID *map3*
+
+         //Add arguments to disable the third map's interactivity here
+            // Disable drag and zoom handlers. 
+         map3.dragPan.disable();
+         map3.scrollZoom.disable();
+         map3.boxZoom.disable();
+         map3.dragRotate.disable();
+         map3.keyboard.disable();
+         map3.doubleClickZoom.disable();
+         map3.touchZoomRotate.disable();
+         map3.touchZoomRotate.disableRotation();
+            
+            
+            
+            
+            // 2.6 Change the map pointers
+            // Change the map pointers
+            //https://www.w3schools.com/cssref/pr_class_cursor.php
+	           map.getCanvas().style.cursor = 'auto';
+	           map2.getCanvas().style.cursor = 'auto';
+        </script>
+  </body>
+</html>
