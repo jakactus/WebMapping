@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <title>Lord of the Rings Travel Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!-- Include the reference to the Mapbox JavaScript here in the <head> of the page  -->
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js'></script>
+    <!-- Include the reference to the Mapbox CSS here in the <head> of the page  -->
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet' />
+      
+    <!--   Link to Google font-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+    <style>
+        /* Insert the CSS code here between the <style> tags */
+        body {
+            margin:0; 
+            padding:0;
+            background-image: url("img/bluepaper.jpg");
+            background-attachment: fixed;
+            background-color: lightblue;
+        }
+        
+        .map iframe{position:relative; margin-left: 30px; width: 65%; height: 975px;}
+        h2 {font-family: "cinzel-decorative-regular", serif;}
+        
+        .title {
+            text-align: center;
+            background-color: #8FB8CD;
+            padding: 5px;
+            text-shadow: 2px 2px #ffffff;
+        }
+        
+        .preamble {
+            text-align: center;
+            margin-left: 25%;
+            width: 50%;
+            background-color: #D3E1EF;
+            padding: 10px;
+        }
+        
+        .header {margin-left: 30px;}
+        .description {
+            display: inline-block;
+            width: 20%;
+            vertical-align: top;
+            margin-left: 30px;
+            font-size: 20px;
+        }
+        
+        .references {
+            margin-left: 30px;
+            font-family: "Raleway";
+        }
+
+        
+        .cinzel-decorative-regular {
+          font-family: "Cinzel Decorative", serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        .cinzel-decorative-bold {
+          font-family: "Cinzel Decorative", serif;
+          font-weight: 700;
+          font-style: normal;
+        }
+
+        .cinzel-decorative-black {
+          font-family: "Cinzel Decorative", serif;
+          font-weight: 900;
+          font-style: normal;
+        }
+        
+        .red-hat-display-<uniquifier> {
+          font-family: "Red Hat Display", sans-serif;
+          font-weight: <weight>;
+          font-style: normal;
+        }
+        
+        .raleway-sans {
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;                  /* value from 100 - 900 */
+          font-style: normal;
+        }
+        
+        /* Ringbearer font */
+        @font-face {font-family: "Ringbearer Medium"; src: url('RingbearerMedium-51mgZ.ttf');}
+        
+        h1 {
+            font-size: 50px;
+        }
+    </style>
+  </head>
+    
+  <body>
+
+      <!-- Headings and title stuff-->
+      <div class="title">
+          <h1 style="font-family: Ringbearer Medium, Cinzel Decorative, serif">Lord of the Rings filming locations<br></h1>
+          
+          <h2 style="font-family: Ringbearer Medium, Cinzel Decorative, serif">Created by: Katherine DeHart & Julia Kotvis<br></h2>
+      </div>
+      <br>
+      
+      <h2 class="preamble" style="font-family: Red Hat Display, sans-serif">The comparative fantasy and real-world maps and locations below show film sites for the Lord of the Rings movies corresponding to Frodo Baggins' journey. Click through the various slideshows below to see where following Frodo's fantasy journey will take you as you visit those same places in real life!</h2>
+      <br>
+      
+      
+      <h2 class="header" style="font-family: Raleway" weight="200"> 1. Southwest of Matamata, NZ </h2>
+      <div class="map">
+        <!--  ADD iframe here  -->
+        <iframe src="map_slideshow_One.html" title="Map" ></iframe>
+
+        <div class="description">
+            <h2 style="font-family: Raleway">The Shire, where it all begins.</h2>
+            <p style="font-family: Raleway">A sheep farm of 1,250 acres provided a location of rolling hills with no buildings, power lines, or roads. This was deemed the perfect place for The Shire, which is home of the Hobbits and Frodo Baggins' home, Bag End.<br><br>Over nine months, the film crew, helped by the New Zealand Army, was able to construct 39 Hobbit homes in 1999.</p>
+            </div>
+      </div>
+
+
+
+      <h2 class= "header" style="font-family: Raleway"> 2. Fort Dorset in Wellington, NZ</h2>
+      <div class="map">
+      <iframe src="map_slideshow_Two.html" title="Map2"></iframe>  
+
+      <div class="description">
+        <h2 style="font-family: Raleway">Inn of the Prancing Pony</h2>
+        <p style="font-family: Raleway">This inn was supposed to be where Frodo, Sam, Pippin, and Merry would meet up with Gandalf the Grey. After being hunted by the Black Riders, they try to hide out here and await Gandalf's arrival. Instead, they meet Aragorn "Strider" who helps them evade the Ringwraiths that soon find the room that the group had booked to stay in and attempt to attack them in their beds.<br><br>The set for the inn was built at Fort Dorset around the army barracks.</p>
+        </div>
+      </div>
+
+      <h2 class="header" style="font-family: Raleway"> 3. Arrow River near Arrowtown, NZ</h2>
+      <div class="map">
+        <iframe src="map_slideshow_Three.html" title="Map3" ></iframe> 
+
+        <div class="description">
+            <h2 style="font-family: Raleway">Ford of Bruinen near Rivendell</h2>
+            <p style="font-family: Raleway">The Ford of Bruinen served as an important moment in Frodo's continued escape from the Ringwraiths. As he is injured, Arwen rides on a horse with him and is unable to outrun their pursuers. However, they are able to cross the river first and as the Ringwraiths hesitantly cross the water, Arwen uses her power to carry them away with a large attack by transforming the river into a horseback troop that take them out so she may get Frodo proper care. <br><br>You can hike to this area using the Miners Monument Walk along the Arrow River.</p>
+        </div>
+      </div>
+
+    <h2 class="header" style="font-family: Raleway"> 4. Southern Alps, NZ</h2>
+    <div class="map">
+        <iframe src="map_slideshow_Four.html" title="Map4" ></iframe> 
+
+        <div class="description">
+            <h2 style="font-family: Raleway">Redhorn Pass, The Misty Mountains</h2>
+            <p style="font-family: Raleway">The Fellowship of the Ring attempted to pass over the Misty Mountains via the Redhorn Pass, but were unable to do so because of a blizzard brought on by Saruman. They went back and decided to cross the Mountains through the Mines of Moria instead.<br><br>The film shots of the Misty Mountains were mostly aerial shots and you can take a helicopter tour over them.</p>
+        </div>
+    </div>
+
+    <h2 class="header" style="font-family: Raleway"> 5. Mount Ngāuruhoe, NZ</h2>
+    <div class="map">
+        <iframe src="map_slideshow_Five.html" title="Map5" ></iframe> 
+
+        <div class="description">
+            <h2 style="font-family: Raleway">Mount Doom, Mordor, where the ring ceases</h2>
+            <p style="font-family: Raleway">To finish his vital quest, Frodo arrives at Mount Doom AKA Mount Orodruin with Sam and Gollum. After much struggle and a final fight against Gollum, Frodo is able to come through with Sam's help and destroy the ring by dropping it into the magma chamber within the volcano.<br><br>Mount Ngāuruhoe is an active stratovolcano and is one of three volcanoes in Tongariro National Park.</p>
+        </div>
+    </div>
+
+    <!-- Text below is copy paste of citations, formatted so links work (hence the length)-->
+    <h2 class="header" style="font-family: Raleway">Font:</h2>
+    <div class="references" style="font-size: 15px; font-family: Raleway">
+    From <em>Ringbearer Font</em>, by Pete Klassen, 2002, Font Space <a href="https://www.fontspace.com/ringbearer-font-f2246" target="_blank">https://www.fontspace.com/ringbearer-font-f2246</a>. Copyright 2002 by Pete Klassen, Freeware Non-Commercial. Reprinted with permission.</div>
+
+      
+    <h2 class="header" style="font-family: Raleway">References:</h2>
+    <div class="references" style="font-size: 15px; font-family: Raleway">
+        Anonymous. (2023, December 25). Caradhras. Tolkien Gateway. <a href= "https://tolkiengateway.net/wiki/Caradhras" target="_blank">https://tolkiengateway.net/wiki/Caradhras</a>  <br><br>
+            
+        Barth, K. (2023, September 15). Dreamy lord of the rings filming locations you can visit. TierOneTravel.com - Online Canadian Travel Agency |. <a href="https://tieronetravel.com/lord-of-the-rings-filming-locations-you-can-visit/#:~:text=Tongariro%20National%20Park%20was%20used,in%20real%20life%2C%20Mount%20Ngauruhoe." target="_blank">https://tieronetravel.com/lord-of-the-rings-filming-locations-you-can-visit/#:~:text=Tongariro%20National%20Park%20was%20used,in%20real%20life%2C%20Mount%20Ngauruhoe</a> <br><br>
+
+        Hobbiton Movie Set Tours. (n.d.). The story of Hobbiton Movie Set. Hobbiton Movie Set. <a href="https://www.hobbitontours.com/our-story/#:~:text=Filming%20commenced%20in%20December%201999,guided%20tours%20commencing%20in%202002." target="_blank">https://www.hobbitontours.com/our-story/#:~:text=Filming%20commenced%20in%20December%201999,guided%20tours%20commencing%20in%202002.</a> <br><br>
+        
+        Jandreau, C. (2024, June 1). “lord of the Rings” sets you can visit in real life. Ranker. <a href="https://www.ranker.com/list/lord-of-the-rings-sets-you-can-visit/coy-jandreau" target="_blank">https://www.ranker.com/list/lord-of-the-rings-sets-you-can-visit/coy-jandreau</a> <br><br>
+
+        Lastovich, T. (2017, March 5). Southern Alps, New Zealand (unsplash) - picryl - public domain media search engine public domain search. PICRYL - Public Domain Media Search Engine. <a href="https://jenikirbyhistory.getarchive.net/media/southern-alps-new-zealand-unsplash-6a47a8" target="_blank"> https://jenikirbyhistory.getarchive.net/media/southern-alps-new-zealand-unsplash-6a47a8</a> <br><br>
+
+        maria345. (2018, March 19). Phone wallpaper lord of the rings, mordor, mount doom, eye of sauron (photo, picture). GoodFon. <a href="https://www.goodfon.com/fantasy/wallpaper-lord-of-the-rings-mordor-mount-doom-eye-of-sauron.html" target="_blank">https://www.goodfon.com/fantasy/wallpaper-lord-of-the-rings-mordor-mount-doom-eye-of-sauron.html</a> <br><br>
+
+        mrgeekcat. (2008, December 7). Strider. DeviantArt. <a href="https://www.deviantart.com/mrgeekcat/art/Strider-105620904" target="_blank">https://www.deviantart.com/mrgeekcat/art/Strider-105620904</a> <br><br>
+
+        New Zealand Tourism. (n.d.). The lord of the rings filming locations. 100% Pure New Zealand. <a href="https://www.newzealand.com/us/feature/the-lord-of-the-rings-trilogy-filming-locations/" target="_blank">https://www.newzealand.com/us/feature/the-lord-of-the-rings-trilogy-filming-locations/</a> <br><br>
+
+        Rikka. (2017, March 11). Nerding around the South Island: Lord of the rings film locations in New Zealand. Deviating the Norm. <a href="https://www.deviatingthenorm.com/blogarchive/2015/5/7/lotrnerdsouth" target="_blank">https://www.deviatingthenorm.com/blogarchive/2015/5/7/lotrnerdsouth</a> <br><br>
+
+        Stevens, J. (2024, May 8). Lord of the rings filming locations in New Zealand. WAYFAIRER. <a href="https://www.wayfairertravel.com/inspiration/lord-of-the-rings-filming-locations-new-zealand#:~:text=Arrow%20River%2C%20located%20near%20Arrowtown,site%20of%20the%20Gladden%20Fields." target="_blank">https://www.wayfairertravel.com/inspiration/lord-of-the-rings-filming-locations-new-zealand#:~:text=Arrow%20River%2C%20located%20near%20Arrowtown,site%20of%20the%20Gladden%20Fields.</a> <br><br>
+
+        Terrones, T. (2023, April 24). Thanks to Hobbiton, New Zealand is home to the world’s Coolest movie set. Paste Magazine. <a href="https://www.pastemagazine.com/travel/the-lord-of-the-rings/thanks-to-hobbiton-new-zealand-is-home-to-the-worlds-coolest-movie-set" target="_blank">https://www.pastemagazine.com/travel/the-lord-of-the-rings/thanks-to-hobbiton-new-zealand-is-home-to-the-worlds-coolest-movie-set</a> <br><br>
+
+        Virtualtopia. (n.d.). LORD OF THE RINGS LOCATIONS. Virtual New Zealand. <a href="https://www.virtualoceania.net/newzealand/culture/lotr/" target="_blank">https://www.virtualoceania.net/newzealand/culture/lotr/</a>  <br><br>
+
+        Wellingtonnz. (n.d.). “lord of the Rings” - creating the impossible. “Lord of the Rings” - creating the impossible - Screen Wellington. <a href="https://www.wellingtonnz.com/screen-wellington/made-in-wellington/lord-of-the-rings-creating-the-impossible" target="_blank">https://www.wellingtonnz.com/screen-wellington/made-in-wellington/lord-of-the-rings-creating-the-impossible</a> <br><br>
+
+        Wikimedia Commons. (2021, July 18). File:Hobbiton, The Shires, Middle-Earth, Matamata, New Zealand - panoramio (7).jpg. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Hobbiton,_The_Shires,_Middle-Earth,_Matamata,_New_Zealand_-_panoramio_(9).jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Hobbiton,_The_Shires,_Middle-Earth,_Matamata,_New_Zealand_-_panoramio_(9).jpg</a> <br><br>
+    </div>
+      
+      
+      <script>
+            /* Insert the JavaScript within the <script> tags, within the body */
+            // 2.1 Start with the Mapbox access token
+            mapboxgl.accessToken = 'pk.eyJ1IjoiamFrb3R2aXMiLCJhIjoiY2x1bGhqeG10MGtlNTJrbWw3Znp6NXhwMyJ9.e7tPYpGGFxv1DBi3veeYog';
+
+        </script>
+  </body>
+</html>
